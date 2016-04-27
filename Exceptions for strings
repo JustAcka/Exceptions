@@ -32,7 +32,7 @@ int main() {
 	
 	catch(string e)
 	{
-		cerr << e << endl; 12
+		cerr << e << endl;
 	}
 	
 	cin.get();
