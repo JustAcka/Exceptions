@@ -1,38 +1,33 @@
 //
-//  main.cpp
+//  ExceptionPractice.cpp
 //  ExceptionPractice
-//
-//  Created by Jonathan Kinney on 4/27/16.
-//  Copyright © 2016 Jonathan Kinney. All rights reserved.
 //
 
 #include <iostream>
 #include <exception>
-#include <string>
 using namespace std;
 
 int main() {
 
 	int num1 = 0;
 	int num2 = 0;
-	int num = 0;
-	string errorMessage = "Break thignS HAPEPEN SOMETIME!!!!!";
-	string clocks = "Pls help";
+	int result = 0;
+	string errorMessage = "Cannot divide by 0";
 
-	
 	try {
 		cout << "Enter a number: ";
-		cin >> num;
-		cout << "Enter a second number!!!! Yaye!!!: ";
+		cin >> num1;
+		cout << "Enter a second number: ";
 		cin >> num2;
 		
-		if(num == 0 || num2 == 0)
+		if(num1 == 0 || num2 == 0) {
 			throw errorMessage;
+			}
+		else {
+			result = num2 / num1;
+			}
 		
-		num1 = num2 / num;
-		
-		cout << "Resykt usj : " << num1 << endl;
-		throw errorMessage;
+		cout << "The result is: " << result << endl;
 	}
 	
 	catch(string e)
