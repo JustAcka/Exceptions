@@ -1,0 +1,38 @@
+// exceptionPractice.cpp : Defines the entry point for the console application.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int num = 0;
+	try {
+		cout << "Enter positive number: ";
+		cin >> num;
+
+		if (num < 0)
+			throw num;
+
+		else {
+			try {
+				cout << "Enter negative number: ";
+				cin >> num;
+
+				if (num > 0)
+					throw num;
+			}
+			catch (...)
+			{
+				throw;
+			}
+		}
+	}
+
+	catch (...)
+	{
+		cout << "Exception occured." << endl;
+	}
+
+	cin.get();
+	cin.ignore();
+} 
