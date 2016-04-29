@@ -41,6 +41,13 @@ int main() {
 		cerr << e << endl;
 	}
 	
+	//catch any exception
+	catch (...)
+	{
+		//display error message
+		cerr << "Exception has occured." << endl;
+	}
+	
 	cin.get();
 	cin.ignore();
 } //end of main function
