@@ -10,17 +10,21 @@ using namespace std;
 
 int main() {
 
+	//declare variables
 	int num1 = 0;
 	int num2 = 0;
 	int result = 0;
 	int errorCode = 1;
 
+	//start try block
 	try {
+		//enter input
 		cout << "Enter a number: ";
 		cin >> num1;
 		cout << "Enter a second number: ";
 		cin >> num2;
 		
+		//throw error if attempting to divide by 0, otherwise display output
 		if(num1 == 0 || num2 == 0) {
 			throw errorCode;
 			}
@@ -31,13 +35,15 @@ int main() {
 		cout << "The result is: " << result << endl;
 	}
 	
+	//catch exception
 	catch(int e)
 	{
+		//display error message
 		cerr << "Cannot divide by 0. Error number: " << e << endl;
 	}
 	
 	cin.get();
 	cin.ignore();
-}
+} //end of main function
 
 
